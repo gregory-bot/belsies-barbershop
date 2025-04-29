@@ -51,7 +51,6 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="mb-6"
         >
-          <Scissors className="h-16 w-16 text-amber-500 mx-auto mb-4" />
           <h1 
             className="text-5xl sm:text-6xl font-bold mb-4"
             style={{ fontFamily: "Courier New, monospace" }}

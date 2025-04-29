@@ -55,7 +55,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <Scissors className="h-8 w-8 text-white" />
+          <Scissors className="h-8 w-8 text-yellow-300" />
           <span
             className="text-xl font-bold text-white"
             style={{ fontFamily: "Courier New, monospace" }}

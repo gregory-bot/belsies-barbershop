@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import HomePage from './pages/HomePage';
 import AuthPage from './pages/AuthPage';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 
@@ -22,7 +21,6 @@ function App() {
                 <>
                   <Navbar />
                   <HomePage />
-                  <Footer />
                 </>
               </PrivateRoute>
             } />

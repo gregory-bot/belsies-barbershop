@@ -2,7 +2,7 @@ import React from "react";
 
 const haircuts = [
   {
-    name: "classic fade",
+    name: "Classic fade",
     image:
       "https://images.pexels.com/photos/897270/pexels-photo-897270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "KSH300",
@@ -31,7 +31,7 @@ const haircuts = [
       "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "KSH 3000",
     description: "Relaxing scalp massage with premium oils",
-    duration: "  30 mins",
+    duration: "30 mins",
   },
   {
     name: "kids Haircut",
@@ -62,17 +62,21 @@ const Services = () => {
           {haircuts.map((haircut, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="relative bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <img
-                src={haircut.image}
-                alt={haircut.name}
-                className="w-full h-32 object-cover"
-              />
+              <div className="group relative">
+                <img
+                  src={haircut.image}
+                  alt={haircut.name}
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h3 className="text-lg font-semibold text-white">
+                    {haircut.name}
+                  </h3>
+                </div>
+              </div>
               <div className="p-3">
-                <h3 className="text-base font-semibold text-black mb-1">
-                  {haircut.name}
-                </h3>
                 <p className="text-gray-600 text-sm mb-2 line-clamp-2">
                   {haircut.description}
                 </p>
