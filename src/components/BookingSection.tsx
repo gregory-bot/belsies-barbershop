@@ -73,7 +73,7 @@ const BookingSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Book Your Session</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-2">Book Your Session</h2>
           <p className="text-lg text-gray-600">
             Reserve your spot for a premium grooming experience at Belsies Barbershop.
           </p>
