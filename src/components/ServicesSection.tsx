@@ -5,12 +5,12 @@ const haircuts = [
     name: "Classic fade",
     image:
       "https://images.pexels.com/photos/897270/pexels-photo-897270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    price: "KSH300",
+    price: "KSH 700",
     description: "Clean, modern fade with precision trimming",
     duration: "45 mins",
   },
   {
-    name: "luxury Beard Trim",
+    name: "Luxury Beard Trim",
     image:
       "https://images.pexels.com/photos/7697390/pexels-photo-7697390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "KSH 450",
@@ -34,7 +34,7 @@ const haircuts = [
     duration: "30 mins",
   },
   {
-    name: "kids Haircut",
+    name: "Kids Haircut",
     image:
       "https://images.pexels.com/photos/7697673/pexels-photo-7697673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "KSH 460",
@@ -42,7 +42,7 @@ const haircuts = [
     duration: "30 mins",
   },
   {
-    name: "Hair dye",
+    name: "Hair Dye",
     image:
       "https://images.pexels.com/photos/7388914/pexels-photo-7388914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: "KSH 300",
@@ -70,13 +70,11 @@ const Services = () => {
                   alt={haircut.name}
                   className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h3 className="text-lg font-semibold text-white">
-                    {haircut.name}
-                  </h3>
-                </div>
               </div>
               <div className="p-3">
+                <h3 className="text-lg font-bold text-gray-900 mb-1">
+                  {haircut.name}
+                </h3>
                 <p className="text-gray-600 text-sm mb-2 line-clamp-2">
                   {haircut.description}
                 </p>
@@ -88,7 +86,7 @@ const Services = () => {
                 </div>
                 <button
                   onClick={() => (window.location.href = "#book-now")}
-                  className="w-full bg-gray-900 text-white py-1.5 rounded text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                  className="w-full bg-gray-900 text-white py-1.5 rounded text-sm font-medium hover:bg-amber-500 transition-colors duration-300"
                 >
                   Book Now
                 </button>

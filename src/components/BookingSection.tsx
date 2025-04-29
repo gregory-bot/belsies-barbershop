@@ -127,12 +127,12 @@ const BookingSection = () => {
                   onChange={handleChange}
                 >
                   <option value="">Select a service</option>
-                  <option value="classic-fade">Classic Fade ($30)</option>
-                  <option value="luxury-beard">Luxury Beard Trim ($25)</option>
-                  <option value="full-service">Full Service ($50)</option>
-                  <option value="head-massage">Head Massage ($35)</option>
-                  <option value="hot-towel-shave">Hot Towel Shave ($40)</option>
-                  <option value="kids-haircut">Kid's Haircut ($20)</option>
+                  <option value="classic-fade">Classic Fade (KSH 700)</option>
+                  <option value="luxury-beard">Luxury Beard Trim (KSH 470)</option>
+                  <option value="full-service">Full Service (KSH 700)</option>
+                  <option value="head-massage">Massage (KSH 3000)</option>
+                  <option value="hot-towel-shave">Hair Dye (KSH 300)</option>
+                  <option value="kids-haircut">Kid's Haircut (KSH 460)</option>
                 </select>
               </div>
               <div>

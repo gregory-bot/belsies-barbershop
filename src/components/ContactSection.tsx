@@ -66,7 +66,7 @@ const ContactSection = () => {
       >
         <div className="container mx-auto px-4 bg-opacity-90 p-8 rounded-lg shadow-md">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900">Get In Touch</h2>
+            <h2 className="text-4xl font-bold text-white">Get In Touch</h2>
             <p className="text-white max-w-xl mx-auto">
               Have questions or want to schedule an appointment? Reach out to us.
             </p>
@@ -197,8 +197,17 @@ const ContactSection = () => {
         </div>
       </section>
 
+      {/* Floating Action Button for Phone Call */}
+      <a
+        href="tel:+254793650401"
+        className="fixed bottom-6 left-2 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-amber-600 transition-colors duration-300"
+        title="Call Us"
+      >
+        <FaPhone className="text-xl" />
+      </a>
+
       {/* Footer */}
-      <footer className="text-center py-4 bg-yellow-100 text-gray-600 text-sm">
+      <footer className="text-center py-2 bg-yellow-100 text-gray-600 text-sm">
         © {new Date().getFullYear()} Belsies Barbershop. All rights reserved.
       </footer>
     </>
