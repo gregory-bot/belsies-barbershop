@@ -94,7 +94,7 @@ const AuthPage = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                  placeholder="John Doe"
+                  placeholder="Benjii-Too"
                 />
               </div>
             )}
@@ -110,7 +110,7 @@ const AuthPage = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-amber-500 focus:border-transparent"
-                placeholder="you@example.com"
+                placeholder="Benjii@gmail.com"
               />
             </div>
             

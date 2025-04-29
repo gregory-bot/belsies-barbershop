@@ -1,119 +1,100 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ServiceType } from '../types';
+import React from "react";
 
-const ServicesSection = () => {
-  const services: ServiceType[] = [
-    {
-      id: '1',
-      name: 'Classic Fade',
-      description: 'Our signature fade with precision tapering and clean lines. Includes a hot towel finish and styling.',
-      price: 30,
-      image: 'https://images.pexels.com/photos/1319459/pexels-photo-1319459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      id: '2',
-      name: 'Luxury Beard Trim',
-      description: 'Expert beard shaping and styling with hot towel treatment, essential oils, and beard balm finish.',
-      price: 25,
-      image: 'https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      id: '3',
-      name: 'Full Service',
-      description: 'Complete package including premium haircut, beard trim, facial massage, and styling consultation.',
-      price: 50,
-      image: 'https://images.pexels.com/photos/3998429/pexels-photo-3998429.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      id: '4',
-      name: 'Head Massage',
-      description: 'Relaxing scalp and head massage using premium oils to stimulate hair growth and relieve stress.',
-      price: 35,
-      image: 'https://images.pexels.com/photos/3992855/pexels-photo-3992855.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      id: '5',
-      name: 'Hot Towel Shave',
-      description: 'Traditional straight razor shave with hot towel preparation and premium aftershave treatment.',
-      price: 40,
-      image: 'https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-      id: '6',
-      name: 'Kid\'s Haircut',
-      description: 'Gentle and patient haircut service for young gentlemen, includes a lollipop reward.',
-      price: 20,
-      image: 'https://images.pexels.com/photos/1684975/pexels-photo-1684975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    }
-  ];
+const haircuts = [
+  {
+    name: "classic fade",
+    image:
+      "https://images.pexels.com/photos/897270/pexels-photo-897270.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: "KSH300",
+    description: "Clean, modern fade with precision trimming",
+    duration: "45 mins",
+  },
+  {
+    name: "luxury Beard Trim",
+    image:
+      "https://images.pexels.com/photos/7697390/pexels-photo-7697390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: "KSH 450",
+    description: "Professional beard shaping and conditioning",
+    duration: "30 mins",
+  },
+  {
+    name: "Full Service",
+    image:
+      "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    price: "KSH 600",
+    description: "Haircut, beard trim, and hot towel treatment",
+    duration: "1 hour",
+  },
+  {
+    name: "Massage",
+    image:
+      "https://images.pexels.com/photos/3738349/pexels-photo-3738349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: "KSH 3000",
+    description: "Relaxing scalp massage with premium oils",
+    duration: "  30 mins",
+  },
+  {
+    name: "kids Haircut",
+    image:
+      "https://images.pexels.com/photos/7697673/pexels-photo-7697673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: "KSH 460",
+    description: "Gentle and fun haircuts for children",
+    duration: "30 mins",
+  },
+  {
+    name: "Hair dye",
+    image:
+      "https://images.pexels.com/photos/7388914/pexels-photo-7388914.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    price: "KSH 300",
+    description: "Professional hair coloring and styling",
+    duration: "2 hours",
+  },
+];
 
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const item = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 }
-  };
-
+const Services = () => {
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Experience the finest in men's grooming with our comprehensive range of services designed for the modern gentleman.
-          </p>
-        </div>
-        
-        <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {services.map((service) => (
-            <motion.div 
-              key={service.id}
-              className="flex flex-col md:flex-row bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
-              variants={item}
+    <section id="services" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+          Our Services
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {haircuts.map((haircut, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
             >
-              <div className="md:w-2/5 h-64 md:h-auto">
-                <img 
-                  src={service.image} 
-                  alt={service.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="md:w-3/5 p-6 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+              <img
+                src={haircut.image}
+                alt={haircut.name}
+                className="w-full h-32 object-cover"
+              />
+              <div className="p-3">
+                <h3 className="text-base font-semibold text-black mb-1">
+                  {haircut.name}
+                </h3>
+                <p className="text-gray-600 text-sm mb-2 line-clamp-2">
+                  {haircut.description}
+                </p>
+                <div className="flex justify-between items-center mb-2 text-sm">
+                  <span className="text-green-600 font-bold">
+                    {haircut.price}
+                  </span>
+                  <span className="text-purple-600">{haircut.duration}</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-amber-600">${service.price}</span>
-                  <button 
-                    className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors"
-                    onClick={() => document.getElementById('book-now')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    Book Now
-                  </button>
-                </div>
+                <button
+                  onClick={() => (window.location.href = "#book-now")}
+                  className="w-full bg-gray-900 text-white py-1.5 rounded text-sm font-medium hover:bg-blue-700 transition-colors duration-300"
+                >
+                  Book Now
+                </button>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default ServicesSection;
+export default Services;
